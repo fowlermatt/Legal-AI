@@ -13,3 +13,5 @@ fastapi
 
 # Utilities
 python-dotenv
+
+langchain-community
