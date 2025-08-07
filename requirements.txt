@@ -1,0 +1,15 @@
+# Core AI
+openai
+langchain
+chromadb
+
+# Document Loading
+pypdf
+unstructured
+
+# Web App
+streamlit
+fastapi
+
+# Utilities
+python-dotenv
