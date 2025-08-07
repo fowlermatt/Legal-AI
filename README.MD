@@ -1,6 +1,6 @@
 # Legal AI Assistant 
 
-This project is a Minimum Viable Product (MVP) for an AI-powered legal assistant designed to help with document-based queries. Using a Retrieval-Augmented Generation (RAG) architecture, it processes legal documents and provides accurate, citable answers to user questions.
+This project is a Minimum Viable Product (MVP) for an AI-powered legal assistant designed to help with document-based queries. It processes legal documents and provides accurate, citable answers to user questions.
 
 The goal is to create a system that can understand a library of legal documents and act as a knowledgeable, on-demand assistant.
 
@@ -25,6 +25,7 @@ The goal is to create a system that can understand a library of legal documents 
 * ChromaDB
 * OpenAI
 * PyPDFLoader
+
 
 
 
