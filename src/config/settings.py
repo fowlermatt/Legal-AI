@@ -81,6 +81,6 @@ class Settings:
         print(f"Chunk Overlap: {self.chunking.chunk_overlap}")
         print(f"Debug Mode: {self.debug}")
         print(f"Log Level: {self.log_level}")
-        print("==================\n")
+        print("\n")
 
 settings = Settings()

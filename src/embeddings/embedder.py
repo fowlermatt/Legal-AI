@@ -106,7 +106,7 @@ class LegalDocumentEmbedder:
     
     def save_embeddings(self, filename: Optional[str] = None) -> str:
         if not self.embeddings_cache:
-            print("⚠️ No embeddings to save")
+            print(" No embeddings to save")
             return ""
         
         if filename is None:
@@ -191,11 +191,9 @@ def main():
     from src.ingestion.loader import LegalDocumentLoader
     from src.ingestion.chunker import LegalDocumentChunker
     
-    print("="*60)
     print("Legal Document Embedding Pipeline")
-    print("="*60)
     
-    print("\n Step 1: Loading documents...")
+    print("\n Loading documents...")
     loader = LegalDocumentLoader()
     documents = loader.load_all_pdfs()
     
@@ -226,10 +224,8 @@ def main():
     for idx, (chunk_id, score, meta) in enumerate(results, 1):
         print(f"\n{idx}. Chunk {chunk_id} (similarity: {score:.4f}) \n Source: {meta['source']}, Page: {meta['page']} \n Preview: {meta['text'][:100]}")
     
-    print("\n" + "="*60)
     print("Embedding pipeline ")
     print(f"   Embeddings saved to: {filepath}")
-    print("="*60)
 
 
 if __name__ == "__main__":
