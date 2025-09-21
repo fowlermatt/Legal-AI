@@ -43,7 +43,7 @@ class QueryProcessor:
         
         if use_llm:
             self.llm = ChatOpenAI(
-                model_name=model_name,
+                model=model_name,
                 temperature=0.0
             )
         else:
@@ -227,7 +227,7 @@ Focus on legal document context."""
             variations = [line.strip() for line in response.split('\n') if line.strip()]
             return variations[:3]
         except Exception as e:
-            print(f"⚠️  LLM expansion failed: {e}")
+            print(f"LLM expansion failed: {e}")
             return []
     
     def generate_hypothetical_answer(self, query: str) -> str:
@@ -244,7 +244,7 @@ Provide only the answer text, as if it were an excerpt from a legal document."""
             hypothetical = self.llm.predict(prompt)
             return hypothetical
         except Exception as e:
-            print(f"⚠️  Failed to generate hypothetical answer: {e}")
+            print(f"Failed to generate hypothetical answer: {e}")
             return ""
     
     def decompose_complex_query(self, query: str) -> List[str]:
